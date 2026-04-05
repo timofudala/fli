@@ -1,3 +1,22 @@
+# Personal extensions
+1. To start the MCP server locally: `uv run fli/mcp/server.py`
+2. To add the local MCP server to Claude Desktop, edit the claude desktop config file under `C:\Users\Timo\AppData\Roaming\Claude\claude_desktop_config.json` and add
+```
+  "mcpServers": {
+    "fli": {
+      "command": "wsl",
+      "args": [
+        "bash",
+        "-c",
+        "cd /home/timo/projects/personal/fli && /home/timo/.local/bin/uv run fli/mcp/server.py"
+      ]
+    }
+  }
+```
+
+Then make sure to completely restart Claude Desktop.
+
+
 # 🛫 Fli - Flight Search MCP Server and Library
 
 A powerful Python library that provides programmatic access to Google Flights data with an elegant CLI interface. Search

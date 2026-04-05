@@ -21,7 +21,7 @@ from fli.core.parsers import parse_airlines as core_parse_airlines
 from fli.core.parsers import parse_max_stops as core_parse_max_stops
 from fli.models import Airline, Airport, MaxStops, TripType
 
-DEFAULT_CURRENCY = "USD"
+DEFAULT_CURRENCY = "EUR"
 
 
 def validate_date(ctx: Context, param: Parameter, value: str) -> str | None:

@@ -74,10 +74,10 @@ class EmissionsFilter(Enum):
 
 
 class Currency(Enum):
-    """Supported currencies for pricing. Currently only USD."""
+    """Supported currencies for pricing. Currently only USD and EUR."""
 
     USD = "USD"
-    # Placeholder for other currencies
+    EUR = "EUR"
 
 
 class BagsFilter(BaseModel):
@@ -135,7 +135,7 @@ class PriceLimit(BaseModel):
     """Maximum price constraint for flight search."""
 
     max_price: PositiveInt
-    currency: Currency | None = Currency.USD
+    currency: Currency | None = Currency.EUR
 
 
 class LayoverRestrictions(BaseModel):

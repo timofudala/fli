@@ -27,6 +27,7 @@ from mcp.types import (
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from fli.cli.utils import DEFAULT_CURRENCY
 from fli.core import (
     build_date_search_segments,
     build_flight_segments,
@@ -60,7 +61,7 @@ class FlightSearchConfig(BaseSettings):
         description="Default number of adult passengers to include in searches.",
     )
     default_currency: str = Field(
-        "USD",
+        DEFAULT_CURRENCY,
         min_length=3,
         max_length=3,
         description="Fallback currency code when Google does not expose one in results.",
